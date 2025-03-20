@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Draft [Candidate Name]</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Draft Mitch Landrieu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -19,103 +19,114 @@
             background-position: center;
             color: white;
             padding: 200px 0;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            position: relative;
         }
         .header h1 {
-            font-size: 3.5em;
+            font-size: 3.7em;
             margin-bottom: 20px;
             font-weight: 700;
             letter-spacing: -0.02em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         }
         .header p {
-            font-size: 1.2em;
-            font-weight: 400;
+            font-size: 1.3em;
+            font-weight: 600;
             max-width: 600px;
             margin-bottom: 0;
-            line-height: 1.5;
+            line-height: 1.6;
+            color: #f8f9fa;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
         }
         .cta-section {
-            padding: 60px 20px;
+            padding: 70px 20px;
             background-color: #f8f9fa;
         }
         .cta-section h2 {
             color: #003366;
-            margin-bottom: 30px;
-            font-size: 2.2em;
-            font-weight: 600;
+            margin-bottom: 35px;
+            font-size: 2.5em;
+            font-weight: 700;
             letter-spacing: -0.02em;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
         }
         .cta-section p {
-            font-size: 1.1em;
-            color: #555;
-            max-width: 500px;
-            margin: 0 auto 30px;
-            line-height: 1.7;
+            font-size: 1.2em;
+            color: #444;
+            max-width: 550px;
+            margin: 0 auto 35px;
+            line-height: 1.8;
+            font-weight: 500;
         }
 
         .cta-form {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 15px;
-            max-width: 400px;
+            gap: 20px;
+            max-width: 450px;
             margin: 0 auto;
         }
         .cta-form input {
-            padding: 12px 15px;
-            font-size: 1.1em;
+            padding: 15px 20px;
+            font-size: 1.2em;
             border: 1px solid #ccc;
             border-radius: 5px;
             width: 100%;
             box-sizing: border-box;
-            transition: border-color 0.3s ease;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
         }
         .cta-form input:focus {
             outline: none;
             border-color: #007bff;
-            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
         }
 
         .cta-button {
             background-color: #DC143C;
             color: white;
-            padding: 15px 35px;
+            padding: 18px 40px;
             border: none;
-            border-radius: 5px;
-            font-size: 1.2em;
+            border-radius: 7px;
+            font-size: 1.3em;
             cursor: pointer;
             text-decoration: none;
-            transition: background-color 0.3s ease;
-            font-weight: 600;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+            font-weight: 700;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
             display: inline-flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
             width: 100%;
             text-align: center;
+            justify-content: center;
         }
 
         .cta-button:hover {
             background-color: #B22222;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            transform: translateY(-2px);
         }
 
         .cta-button:active {
             background-color: #A01717;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
             transform: translateY(1px);
         }
 
         footer {
             background-color: #002663;
             color: #e9ecef;
-            padding: 25px 0;
-            font-size: 0.95em;
+            padding: 30px 0;
+            font-size: 1.1em;
             text-align: center;
             border-top: 1px solid #003366;
+            font-weight: 500;
+            position: relative;
         }
         footer a {
             color: #adb5bd;
@@ -125,24 +136,190 @@
             text-decoration: underline;
         }
         .flag-icon {
-            width: 24px;
+            width: 28px;
             height: auto;
-            margin-right: 5px;
+            margin-right: 8px;
             display: inline-block;
             vertical-align: middle;
+            filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.3));
+        }
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: #003366;
+            font-size: 1.7em;
+            font-weight: 700;
+            z-index: 10;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+            font-family: 'Roboto Slab', serif;
+            letter-spacing: -0.05em;
+        }
+
+        /* Add a subtle gradient to the body */
+        body {
+            background: linear-gradient(to bottom, #ffffff, #f0f0f0);
+        }
+
+        /* Add a semi-transparent overlay to the header image for a glossy effect */
+        .header {
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/7e/Former_NOLA_Mayor_Mitch_Landrieu_Sept._2018_%2831020296238%29.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 200px 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        .header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.4);
+            background-image: radial-gradient(circle at center, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.2));
+            pointer-events: none;
+        }
+        .header > * {
+            position: relative;
+            z-index: 1;
+        }
+        .disclaimer {
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            font-size: 0.9em;
+            color: #ccc;
+        }
+
+        /* New Section Styles */
+        .key-strengths-section {
+            padding: 80px 20px;
+            /*background-image: url('https://flagcdn.com/w800/us.png');*/
+            background-size: cover;
+            background-position: center;
+            background-color: rgba(248, 249, 250, 0.9);
+        }
+        .key-strengths-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .strength-block {
+            background-color: rgba(255, 255, 255, 0.85);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            text-align: center;
+            flex: 1 0 300px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .strength-block:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+        }
+        .strength-icon {
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: #003366;
+            filter: drop-shadow(2px 2px 3px rgba(0, 0, 0, 0.2));
+        }
+        .strength-title {
+            font-size: 1.5em;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #DC143C;
+        }
+        .strength-text {
+            font-size: 1.1em;
+            line-height: 1.7;
+            color: #555;
+        }
+
+        /* Icon Styles */
+        .political-icon::before {
+            content: "🏛️";
+        }
+        .bridge-icon::before {
+            content: "🤝";
+        }
+        .crisis-icon::before {
+            content: "⚖️"; /* Flame of Justice */
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #002663;
+            color: #e9ecef;
+            padding: 30px 0;
+            font-size: 1.1em;
+            text-align: center;
+            border-top: 1px solid #003366;
+            font-weight: 500;
+            position: relative;
+            background-image: url('https://flagcdn.com/w800/us.png'); /* Add flag to footer */
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: overlay;
+        }
+        footer::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.1); /* Adjust for desired transparency */
+            pointer-events: none; /* Ensure clicks pass through */
+        }
+        footer > * {
+            position: relative; /* Bring footer content above the pseudo-element */
+            z-index: 1;
         }
 
     </style>
 </head>
 <body>
     <header class="header">
-        <h1>Draft [Candidate Name] for Office</h1>
-        <p>Join the movement to bring principled leadership and positive change to our nation.</p>
+        <div class="logo">DRAFT LANDRIEU</div>
+        <h1>Draft Mitch Landrieu for Senate</h1>
+        <p>Join the movement to bring principled leadership and positive change to Louisiana.</p>
     </header>
 
+    <section class="key-strengths-section">
+        <div class="key-strengths-grid">
+            <div class="strength-block">
+                <div class="strength-icon political-icon"></div>
+                <h3 class="strength-title">Proven Leadership</h3>
+                <p class="strength-text">Years of dedicated public service, navigating complex challenges and delivering results for Louisiana families.</p>
+            </div>
+            <div class="strength-block">
+                <div class="strength-icon bridge-icon"></div>
+                <h3 class="strength-title">Unity Builder</h3>
+                <p class="strength-text">A history of bringing people together, fostering collaboration, and finding common ground to move Louisiana forward.</p>
+            </div>
+            <div class="strength-block">
+                <div class="strength-icon crisis-icon"></div>
+                <h3 class="strength-title">Resilient Leader</h3>
+                <p class="strength-text">Demonstrated ability to lead in times of crisis, making tough decisions with courage and compassion to protect and rebuild our communities.</p>
+            </div>
+        </div>
+    </section>
+
     <section class="cta-section">
-        <h2>Ready to Shape the Future?</h2>
-        <p>Your voice matters. Sign up to show your support, volunteer your time, and help us draft [Candidate Name] to run for office.</p>
+        <h2>Ready to Shape the Future of Louisiana?</h2>
+        <p>Your voice matters. Sign up to show your support, volunteer your time, and help us draft Mitch Landrieu to run for Senate.</p>
         <form id="cta-form" class="cta-form">
             <input type="text" id="name" name="name" placeholder="Enter your full name" required>
             <input type="email" id="email" name="email" placeholder="Enter your email address" required>
@@ -155,8 +332,11 @@
     </section>
 
     <footer>
-        <p>Contact Us: <a href="mailto:info@example.com">info@example.com</a></p>
-        <p>&copy; 2024 Draft [Candidate Name] | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        <p><a href="mailto:draftlandrieu@proton.me">draftlandrieu@proton.me</a></p>
+        <p>&copy; 2024 Draft Mitch Landrieu | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        <div class="disclaimer">
+            Not affiliated with any candidate or committee. Not affiliated with Mr. Landrieu.
+        </div>
     </footer>
 
     <script>
@@ -191,7 +371,7 @@
             formData.append('zipcode', zipcode);
 
             const xhr = new XMLHttpRequest();
-            const url = "https://script.google.com/macros/s/AKfycbzntTDHMM_kJJg4O1MCSv08D5f376seRvXJiNu4fZATbps5CcvoXzSB_EddBt_Lhnbd5w/exec";  //  <===== PASTE YOUR WEB APP URL HERE
+            const url = "https://script.google.com/macros/s/AKfycbzntTDHMM_kJJg4O1MCSv08D5f376seRvXJiNu4fZATbps5CcvoXzSB_EddBt_Lhnbd5w/exec";
             xhr.open('POST', url);
             xhr.onload = function() {
                 if (xhr.status === 200) {
