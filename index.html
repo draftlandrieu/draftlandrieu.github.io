@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Draft [Candidate Name]</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            text-align: center;
+        }
+        .header {
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/7/7e/Former_NOLA_Mayor_Mitch_Landrieu_Sept._2018_%2831020296238%29.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 200px 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .header h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+        .header p {
+            font-size: 1.2em;
+            font-weight: 400;
+            max-width: 600px;
+            margin-bottom: 0;
+            line-height: 1.5;
+        }
+        .cta-section {
+            padding: 60px 20px;
+            background-color: #f8f9fa;
+        }
+        .cta-section h2 {
+            color: #003366;
+            margin-bottom: 30px;
+            font-size: 2.2em;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+        }
+        .cta-section p {
+            font-size: 1.1em;
+            color: #555;
+            max-width: 500px;
+            margin: 0 auto 30px;
+            line-height: 1.7;
+        }
+
+        .cta-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        .cta-form input {
+            padding: 12px 15px;
+            font-size: 1.1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease;
+        }
+        .cta-form input:focus {
+            outline: none;
+            border-color: #007bff;
+            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+        }
+
+        .cta-button {
+            background-color: #DC143C;
+            color: white;
+            padding: 15px 35px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            font-weight: 600;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .cta-button:hover {
+            background-color: #B22222;
+        }
+
+        .cta-button:active {
+            background-color: #A01717;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transform: translateY(1px);
+        }
+
+        footer {
+            background-color: #002663;
+            color: #e9ecef;
+            padding: 25px 0;
+            font-size: 0.95em;
+            text-align: center;
+            border-top: 1px solid #003366;
+        }
+        footer a {
+            color: #adb5bd;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        .flag-icon {
+            width: 24px;
+            height: auto;
+            margin-right: 5px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Draft [Candidate Name] for Office</h1>
+        <p>Join the movement to bring principled leadership and positive change to our nation.</p>
+    </header>
+
+    <section class="cta-section">
+        <h2>Ready to Shape the Future?</h2>
+        <p>Your voice matters. Sign up to show your support, volunteer your time, and help us draft [Candidate Name] to run for office.</p>
+        <form id="cta-form" class="cta-form">
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+            <input type="text" id="zipcode" name="zipcode" placeholder="Enter your zip code" required>
+            <button type="submit" class="cta-button">
+                <img src="https://flagcdn.com/w40/us.png" alt="US Flag" class="flag-icon">
+                Join the Movement
+            </button>
+        </form>
+    </section>
+
+    <footer>
+        <p>Contact Us: <a href="mailto:info@example.com">info@example.com</a></p>
+        <p>&copy; 2024 Draft [Candidate Name] | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+
+    <script>
+        document.getElementById('cta-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const nameInput = document.getElementById('name');
+            const emailInput = document.getElementById('email');
+            const zipcodeInput = document.getElementById('zipcode');
+            const name = nameInput.value;
+            const email = emailInput.value;
+            const zipcode = zipcodeInput.value;
+
+
+            // Basic validation
+            if (!name) {
+                alert('Please enter your full name.');
+                return;
+            }
+            if (!isValidEmail(email)) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+             if (!zipcode) {
+                alert('Please enter your zip code.');
+                return;
+            }
+
+            const formData = new FormData();
+            formData.append('name', name);
+            formData.append('email', email);
+            formData.append('zipcode', zipcode);
+
+            const xhr = new XMLHttpRequest();
+            const url = "YOUR_WEB_APP_URL";  //  <===== PASTE YOUR WEB APP URL HERE
+            xhr.open('POST', url);
+            xhr.onload = function() {
+                if (xhr.status === 200) {
+                    alert('Thank you for joining the movement!');
+                     nameInput.value = '';
+                    emailInput.value = '';
+                    zipcodeInput.value = '';
+                    console.log('Data sent successfully!');
+                } else {
+                    alert('Sorry, there was an error submitting your information. Please try again.');
+                    console.error('Error sending data:', xhr.status, xhr.responseText);
+                }
+            };
+            xhr.onerror = function() {
+                alert('Sorry, there was an error submitting your information. Please check your internet connection and try again.');
+                console.error('Network error occurred');
+            }
+            xhr.send(formData);
+        });
+
+        function isValidEmail(email) {
+            // Basic email validation regex
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+    </script>
+</body>
+</html>
